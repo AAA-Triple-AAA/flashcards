@@ -41,6 +41,8 @@ GIF created with ...
 
 ## Notes
 
+- American Flag Image by <a href="https://www.freepik.com/free-vector/flat-waving-american-flag-background_25982694.htm#query=waving%20american%20flag%20background&position=3&from_view=keyword&track=ais_hybrid&uuid=c30182a2-caf4-4c45-b744-8cd515516315">Freepik</a>
+
 Describe any challenges encountered while building the app.
 
 ## License

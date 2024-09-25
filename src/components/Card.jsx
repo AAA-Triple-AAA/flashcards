@@ -13,16 +13,16 @@ const Card = ({ question, answer, difficulty, frontimg, backimg }) => {
         }
     };
 
-    const backClasses = "card " + difficulty + " " + backimg;
-    const frontClasses = "card " + difficulty + " " + frontimg;
+    const backClasses = "card " + difficulty + " " + backimg + " " + "back";
+    const frontClasses = "card " + difficulty + " " + frontimg + " " + "front";
 
     return side === "front" ? (
         <div className={frontClasses} onClick={updateSide}>
-            <p>QUESTION</p>
+            <p>{question}</p>
         </div>
     ) : (
         <div className={backClasses} onClick={updateSide}>
-            <p>ANSWER</p>
+            <p>{answer}</p>
         </div>
     );
 };

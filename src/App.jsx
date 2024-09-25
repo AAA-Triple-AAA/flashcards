@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Card from "./components/Card.jsx";
 import "./App.css";
 
@@ -11,7 +11,11 @@ const App = () => {
                 <h4>Number of Cards: 10</h4>
             </div>
             <div className="card-container">
-                <Card difficulty={"hard"} />
+                <Card
+                    difficulty={"hard"}
+                    question={"QUESTION"}
+                    answer={"ANSWER"}
+                />
                 <button>⟶</button>
             </div>
         </div>
