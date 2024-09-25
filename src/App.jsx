@@ -7,11 +7,11 @@ const App = () => {
         <div className="App">
             <div className="header">
                 <h1>American Political History Quiz</h1>
-                <h3>How well do you know the political history of the US?</h3>
-                <p>Number of Cards: 10</p>
+                <h2>How well do you know the political history of the US?</h2>
+                <h4>Number of Cards: 10</h4>
             </div>
             <div className="card-container">
-                <Card />
+                <Card difficulty={"hard"} />
                 <button>⟶</button>
             </div>
         </div>
