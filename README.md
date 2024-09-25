@@ -1,4 +1,4 @@
-# Web Development Project 2 - *Flashcards Pt.1: American Political History Quiz*
+# Web Development Project 2 - _Flashcards Pt.1: American Political History Quiz_
 
 Submitted by: **Adrian Abella Acosta**
 
@@ -20,7 +20,7 @@ The following **optional** features are implemented:
 
 - [ ] Cards contains images in addition to or in place of text
 - [ ] Cards have different visual styles such as color based on their category
-  - [ ] *visual style implemented*
+  - [ ] _visual style implemented_
 
 The following **additional** features are implemented:
 
@@ -33,7 +33,9 @@ Here's a walkthrough of implemented required features:
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+
+GIF created with ...
+
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
