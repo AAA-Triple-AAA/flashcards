@@ -10,71 +10,71 @@ const App = () => {
             difficulty: "easy",
             question: "QUESTION1",
             answer: "ANSWER1",
-            frontimg: "",
-            backimg: "",
+            front_img: "",
+            back_img: "",
         },
         {
             difficulty: "medium",
             question: "QUESTION2",
             answer: "ANSWER2",
-            frontimg: "",
-            backimg: "",
+            front_img: "",
+            back_img: "",
         },
         {
             difficulty: "hard",
             question: "QUESTION3",
             answer: "ANSWER3",
-            frontimg: "",
-            backimg: "",
+            front_img: "",
+            back_img: "",
         },
         {
             difficulty: "easy",
             question: "QUESTION4",
             answer: "ANSWER3",
-            frontimg: "",
-            backimg: "",
+            front_img: "",
+            back_img: "",
         },
         {
             difficulty: "medium",
             question: "QUESTION5",
             answer: "ANSWER3",
-            frontimg: "",
-            backimg: "",
+            front_img: "",
+            back_img: "",
         },
         {
             difficulty: "hard",
             question: "QUESTION6",
             answer: "ANSWER3",
-            frontimg: "",
-            backimg: "",
+            front_img: "",
+            back_img: "",
         },
         {
             difficulty: "easy",
             question: "QUESTION7",
             answer: "ANSWER3",
-            frontimg: "",
-            backimg: "",
+            front_img: "",
+            back_img: "",
         },
         {
             difficulty: "medium",
             question: "QUESTION8",
             answer: "ANSWER3",
-            frontimg: "",
-            backimg: "",
+            front_img: "",
+            back_img: "",
         },
         {
             difficulty: "hard",
             question: "QUESTION9",
             answer: "ANSWER3",
-            frontimg: "",
-            backimg: "",
+            front_img: "",
+            back_img: "",
         },
         {
             difficulty: "easy",
             question: "QUESTION10",
             answer: "ANSWER3",
-            frontimg: "",
-            backimg: "",
+            front_img: "",
+            back_img: "",
         },
     ];
 
@@ -98,8 +98,8 @@ const App = () => {
                     difficulty={cardContent[card].difficulty}
                     question={cardContent[card].question}
                     answer={cardContent[card].answer}
-                    backimg={cardContent[card].backimg}
-                    frontimg={cardContent[card].frontimg}
+                    back_img={cardContent[card].back_img}
+                    front_img={cardContent[card].front_img}
                 />
                 <button onClick={updateCard}>⟶</button>
             </div>
