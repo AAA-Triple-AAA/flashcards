@@ -28,16 +28,22 @@
 .card.back {
     transform: rotateY(180deg);
 }
+
 .easy {
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background-color: white;
 }
 
 .medium {
-    background-color: #2b549d;
+    /* background-color: #2b549d; */
+    background-color: #002359;
+    color: white;
 }
 
 .hard {
-    background-color: #be304f;
+    color: white;
+    background-color: #a7092a;
+    /* background-color: #be304f; */
 }
 
 img {
