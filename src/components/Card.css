@@ -14,6 +14,7 @@
     transform-style: preserve-3d;
     cursor: pointer;
     text-align: center;
+    padding: 0 20px 0 20px;
 }
 
 .back p {
@@ -28,13 +29,18 @@
     transform: rotateY(180deg);
 }
 .easy {
-    background-color: rgba(255, 255, 255, 0.463);
+    background-color: rgb(255, 255, 255);
 }
 
 .medium {
-    background-color: #183d7d90;
+    background-color: #2b549d;
 }
 
 .hard {
-    background-color: #aa1c3ba2;
+    background-color: #be304f;
+}
+
+img {
+    max-height: 305px;
+    border-radius: 50px;
 }

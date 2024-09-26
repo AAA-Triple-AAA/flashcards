@@ -25,10 +25,12 @@ const Card = ({ question, answer, difficulty, front_img, back_img, reset }) => {
     return side === "front" ? (
         <div className={frontClasses} onClick={updateSide}>
             <p>{question}</p>
+            <img src={front_img}></img>
         </div>
     ) : (
         <div className={backClasses} onClick={updateSide}>
             <p>{answer}</p>
+            <img src={back_img}></img>
         </div>
     );
 };

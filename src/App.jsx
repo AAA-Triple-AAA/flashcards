@@ -12,7 +12,7 @@ const App = () => {
             question: "Who was the first president of the United States?",
             answer: "George Washington",
             front_img: "",
-            back_img: "",
+            back_img: "/public/images/george-washington.png",
         },
         {
             difficulty: "medium",
@@ -20,7 +20,7 @@ const App = () => {
                 "Which U.S. president was in office during the signing of the Civil Rights Act of 1964?",
             answer: "Lyndon B. Johnson",
             front_img: "",
-            back_img: "",
+            back_img: "/public/images/LBJ.png",
         },
         {
             difficulty: "hard",
@@ -28,14 +28,14 @@ const App = () => {
                 "Who was the only U.S. president to serve two non-consecutive terms?",
             answer: "Grover Cleveland",
             front_img: "",
-            back_img: "",
+            back_img: "/public/images/cleveland.png",
         },
         {
             difficulty: "easy",
             question: "What is the capital city of the United States?",
             answer: "Washington, D.C.",
             front_img: "",
-            back_img: "",
+            back_img: "/public/images/washington.png",
         },
         {
             difficulty: "medium",
@@ -48,7 +48,7 @@ const App = () => {
             difficulty: "hard",
             question:
                 "What was the name of the political scandal that led to the resignation of President Richard Nixon?",
-            answer: "The Watergate Scandal.",
+            answer: "The Watergate Scandal",
             front_img: "",
             back_img: "",
         },
@@ -57,21 +57,21 @@ const App = () => {
             question: "What is the highest court in the United States?",
             answer: "The Supreme Court",
             front_img: "",
-            back_img: "",
+            back_img: "/public/images/CourtBuilding.png",
         },
         {
             difficulty: "medium",
             question:
                 "What year did women gain the right to vote in the United States?",
             answer: "1920",
-            front_img: "",
+            front_img: "/public/images/suffragettes.png",
             back_img: "",
         },
         {
             difficulty: "hard",
             question: "In what year was the U.S. Constitution written?",
             answer: "1787",
-            front_img: "",
+            front_img: "/public/images/signing_constitution.png",
             back_img: "",
         },
         {
@@ -79,7 +79,7 @@ const App = () => {
             question: "Who wrote the Declaration of Independence?",
             answer: "Thomas Jefferson",
             front_img: "",
-            back_img: "",
+            back_img: "/public/images/jefferson.png",
         },
     ];
 
