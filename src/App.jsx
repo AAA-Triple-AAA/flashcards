@@ -7,7 +7,7 @@ const getRandomInt = (max) => {
 };
 
 const App = () => {
-    const [card, setCard] = useState(getRandomInt(10));
+    const [card, setCard] = useState(10);
     const [reset, setReset] = useState(false);
 
     const cardContent = [
@@ -84,6 +84,13 @@ const App = () => {
             answer: "Thomas Jefferson",
             front_img: "",
             back_img: "/images/jefferson.png",
+        },
+        {
+            difficulty: "easy",
+            question: "READY TO START?",
+            answer: "Click the next button. Good luck...",
+            front_img: "",
+            back_img: "",
         },
     ];
 
