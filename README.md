@@ -2,9 +2,9 @@
 
 Submitted by: **Adrian Abella Acosta**
 
-This web app: **10 flashcards with a question that can be clicked to flip to the answer. Questions are about American Political History. A next button can be pressed to proceed to the next question.**
+This web app: **10 flashcards with a question that can be clicked to flip to the answer. Questions are about American Political History. A next button can be pressed to proceed to the next random question. Questions are color-coded: RED for HARD, BLUE for MEDIUM, WHITE for EASY.**
 
-Time spent: **2** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
@@ -30,11 +30,11 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='/public/VideoWalkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ...
+GIF created with LiceCap
 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
