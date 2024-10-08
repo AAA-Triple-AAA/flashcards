@@ -65,4 +65,5 @@ button {
 
 .hide {
     opacity: 0;
+    cursor: default;
 }
