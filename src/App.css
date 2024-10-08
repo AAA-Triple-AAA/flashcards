@@ -23,3 +23,46 @@ button {
     margin-top: 10px;
     width: 100px;
 }
+
+.guess-form {
+    color: black;
+    border-radius: 8px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px 10px 20px;
+}
+
+.submission-button {
+    height: 30px;
+    font-size: 15px;
+    padding: 0;
+    background-color: #a7092a;
+}
+
+.bar {
+    width: 796px;
+    border-radius: 8px;
+    background-color: white;
+    border: 3px solid black;
+    margin-top: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.shuffle-button {
+    color: black;
+    background-color: white;
+    font-weight: 800;
+}
+.shuffle-button:hover {
+    color: white;
+    background-color: black;
+    font-weight: 800;
+}
+
+.hide {
+    opacity: 0;
+}

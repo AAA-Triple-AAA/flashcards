@@ -2,10 +2,6 @@ import { useState } from "react";
 import Card from "./components/Card.jsx";
 import "./App.css";
 
-const getRandomInt = (max) => {
-    return Math.floor(Math.random() * max);
-};
-
 const App = () => {
     const [card, setCard] = useState(10);
     const [reset, setReset] = useState(false);
@@ -94,10 +90,40 @@ const App = () => {
         },
     ];
 
-    const updateCard = () => {
+    const [questions, setQuestions] = useState(cardContent);
+
+    const updateCardF = () => {
         setReset(true);
-        setCard(getRandomInt(10));
+        if (card === 10) {
+            setCard(0);
+        }
+        if (!(card >= 9)) {
+            setCard(card + 1);
+        }
         setTimeout(() => setReset(false), 10);
+    };
+
+    const updateCardB = () => {
+        setReset(true);
+        if (!(card <= 0)) {
+            setCard(card - 1);
+        }
+        setTimeout(() => setReset(false), 10);
+    };
+
+    const updateQuestions = () => {
+        setQuestions(shuffleArray(questions));
+        setCard(0);
+    };
+
+    const shuffleArray = (array) => {
+        const newArray = [...array];
+        for (let i = newArray.length - 2; i > 0; i--) {
+            const j = Math.floor(Math.random() * i);
+            [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        console.log(array);
+        return newArray;
     };
 
     return (
@@ -109,14 +135,36 @@ const App = () => {
             </div>
             <div className="card-container">
                 <Card
-                    difficulty={cardContent[card].difficulty}
-                    question={cardContent[card].question}
-                    answer={cardContent[card].answer}
-                    back_img={cardContent[card].back_img}
-                    front_img={cardContent[card].front_img}
+                    difficulty={questions[card].difficulty}
+                    question={questions[card].question}
+                    answer={questions[card].answer}
+                    back_img={questions[card].back_img}
+                    front_img={questions[card].front_img}
                     reset={reset}
                 />
-                <button onClick={updateCard}>⟶</button>
+                <div className="bar">
+                    <form className="guess-form">
+                        <input type="text" placeholder="ENTER GUESS..." />
+                        <button type="submit" className="submission-button">
+                            SUBMIT
+                        </button>
+                    </form>
+                    <button
+                        onClick={updateCardB}
+                        className={card === 10 || card === 0 ? "hide" : ""}>
+                        ⟵
+                    </button>
+                    <button
+                        onClick={updateCardF}
+                        className={card === 9 ? "hide" : ""}>
+                        ⟶
+                    </button>
+                    <button
+                        className="shuffle-button"
+                        onClick={updateQuestions}>
+                        SHUFFLE
+                    </button>
+                </div>
             </div>
         </div>
     );
