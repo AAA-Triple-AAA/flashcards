@@ -78,3 +78,11 @@ button {
     background-color: #a7092a;
     width: 30px;
 }
+
+.wrong {
+    background-color: red;
+}
+
+.correct {
+    background-color: green;
+}

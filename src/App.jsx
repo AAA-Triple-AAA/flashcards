@@ -10,6 +10,7 @@ const App = () => {
     const [guess, setGuess] = useState("");
     const [submitted, setSubmitted] = useState(false);
     const [firstPass, setFirstPass] = useState(true);
+    const [formBG, setFormBG] = useState("");
 
     const cardContent = [
         {
@@ -155,6 +156,7 @@ const App = () => {
     const updateCardF = () => {
         if (firstPass) {
             discardQuestion();
+            setFormBG("");
             setFirstPass(false);
             setReset(true);
             setCard(0);
@@ -163,6 +165,7 @@ const App = () => {
             setTimeout(() => setReset(false), 10);
             return;
         }
+        setFormBG("");
         setReset(true);
         if (card === questions.length - 1) {
             setCard(0);
@@ -175,6 +178,7 @@ const App = () => {
     };
 
     const updateCardB = () => {
+        setFormBG("");
         setReset(true);
         if (card > 0) {
             setCard(card - 1);
@@ -189,6 +193,7 @@ const App = () => {
     const updateQuestions = () => {
         setQuestions(shuffleArray(questions));
         setGuess("");
+        setFormBG("");
     };
 
     const shuffleArray = (array) => {
@@ -211,9 +216,11 @@ const App = () => {
                     if (currStreak >= longestStreak) {
                         setLongestStreak(longestStreak + 1);
                     }
+                    setFormBG("correct");
                     break;
                 } else {
                     setCurrStreak(0);
+                    setFormBG("wrong");
                 }
             }
             setSubmitted(true);
@@ -264,6 +271,7 @@ const App = () => {
                             placeholder="ENTER GUESS..."
                             value={guess}
                             onChange={handleChange}
+                            className={formBG}
                         />
                         <button type="submit" className="submission-button">
                             SUBMIT
