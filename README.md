@@ -1,49 +1,41 @@
-# Web Development Project 2 - _Flashcards Pt.1: American Political History Quiz_
+# Web Development Project 2 - _Flashcards Pt.2: American Political History Quiz_
 
 Submitted by: **Adrian Abella Acosta**
 
-This web app: **10 flashcards with a question that can be clicked to flip to the answer. Questions are about American Political History. A next button can be pressed to proceed to the next random question. Questions are color-coded: RED for HARD, BLUE for MEDIUM, WHITE for EASY.**
+This web app: **10 flashcards with a question that can be clicked to flip to the answer. Questions are about American Political History. A next button can be pressed to proceed to the next ordered question. A shuffle button will mix up the order of the cards randomly. The user can also enter a guess for what the answer will be a score tracker will be kept. A discard button can be used to remove a card from the deck. Questions are color-coded: RED for HARD, BLUE for MEDIUM, WHITE for EASY.**
 
-Time spent: **3** hours spent in total
+Time spent: **5** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [x] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [x] **A list of card pairs is created**
-- [x] **Clicking on the card shows the corresponding component of the information pair**
-- [x] **Clicking the next button displays a random new card**
+- [x] **The user can enter their guess in a box before seeing the flipside of the card**
+- [x] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [x] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [x] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [x] Cards contains images in addition to or in place of text
-- [x] Cards have different visual styles such as color based on their category
-  - [x] _American color themed flashcards: American flag background, Red for Hard questions, Blue for Medium questions, and White for Easy questions_
-
-The following **additional** features are implemented:
-
-- [x] Cards have a flip animation.
+- [x] A shuffle button is used to randomize the order of the cards
+- [x] A user's answer may be counted as correct even when it is slightly different from the target answer
+- [x] A counter displays the user's current and longest streak of correct responses
+- [x] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented user stories:
 
 <img src='/public/VideoWalkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-
 GIF created with LiceCap
-
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
 [peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
-
-- American Flag Image by <a href="https://www.freepik.com/free-vector/flat-waving-american-flag-background_25982694.htm#query=waving%20american%20flag%20background&position=3&from_view=keyword&track=ais_hybrid&uuid=c30182a2-caf4-4c45-b744-8cd515516315">Freepik</a>
 
 Describe any challenges encountered while building the app.
 
