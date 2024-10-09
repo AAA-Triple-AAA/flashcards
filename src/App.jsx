@@ -217,13 +217,13 @@ const App = () => {
                         setLongestStreak(longestStreak + 1);
                     }
                     setFormBG("correct");
+                    setSubmitted(true);
                     break;
                 } else {
                     setCurrStreak(0);
                     setFormBG("wrong");
                 }
             }
-            setSubmitted(true);
         }
     };
 
