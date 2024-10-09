@@ -37,7 +37,11 @@ GIF created with LiceCap
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+- American Flag Image by Freepik
+- Struggles:
+  - Successfully shuffling the deck of cards given the 11th card was meant to be the intro card.
+  - Struggled with discarding causing an issue where all elements disappeared.
+  - Struggled with the proper ordering of cards and the hiding and un-hiding of arrow buttons.
 
 ## License
 
