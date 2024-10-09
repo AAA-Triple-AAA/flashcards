@@ -3,14 +3,23 @@ import Card from "./components/Card.jsx";
 import "./App.css";
 
 const App = () => {
-    const [card, setCard] = useState(10);
+    const [card, setCard] = useState(0);
     const [reset, setReset] = useState(false);
     const [longestStreak, setLongestStreak] = useState(0);
     const [currStreak, setCurrStreak] = useState(0);
     const [guess, setGuess] = useState("");
     const [submitted, setSubmitted] = useState(false);
+    const [firstPass, setFirstPass] = useState(true);
 
     const cardContent = [
+        {
+            difficulty: "easy",
+            question: "READY TO START?",
+            answer: "Click the next button. Good luck...",
+            front_img: "",
+            back_img: "",
+            ans_key: "123456$dnkf12",
+        },
         {
             difficulty: "easy",
             question: "Who was the first president of the United States?",
@@ -95,14 +104,6 @@ const App = () => {
             back_img: "/images/jefferson.png",
             ans_key: "jeff",
         },
-        {
-            difficulty: "easy",
-            question: "READY TO START?",
-            answer: "Click the next button. Good luck...",
-            front_img: "",
-            back_img: "",
-            ans_key: "123456$dnkf12",
-        },
     ];
 
     const answerKey = [
@@ -152,11 +153,20 @@ const App = () => {
     const [questions, setQuestions] = useState(cardContent);
 
     const updateCardF = () => {
-        setReset(true);
-        if (card === 10) {
+        if (firstPass) {
+            discardQuestion();
+            setFirstPass(false);
+            setReset(true);
             setCard(0);
+            setSubmitted(false);
+            setGuess("");
+            setTimeout(() => setReset(false), 10);
+            return;
         }
-        if (!(card >= 9)) {
+        setReset(true);
+        if (card === questions.length - 1) {
+            setCard(0);
+        } else {
             setCard(card + 1);
         }
         setSubmitted(false);
@@ -166,8 +176,10 @@ const App = () => {
 
     const updateCardB = () => {
         setReset(true);
-        if (!(card <= 0) && card != 10) {
+        if (card > 0) {
             setCard(card - 1);
+        } else {
+            setCard(questions.length - 1);
         }
         setSubmitted(false);
         setGuess("");
@@ -181,8 +193,8 @@ const App = () => {
 
     const shuffleArray = (array) => {
         const newArray = [...array];
-        for (let i = newArray.length - 2; i > 0; i--) {
-            const j = Math.floor(Math.random() * i);
+        for (let i = newArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
             [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
         }
         return newArray;
@@ -192,7 +204,7 @@ const App = () => {
         event.preventDefault();
         if (!submitted) {
             let tempGuess = guess.toLowerCase().trim();
-            let answers = answerKeyMap.get(cardContent[card].ans_key);
+            let answers = answerKeyMap.get(questions[card].ans_key);
             for (let answer of answers) {
                 if (tempGuess === answer) {
                     setCurrStreak(currStreak + 1);
@@ -210,6 +222,19 @@ const App = () => {
 
     const handleChange = (event) => {
         setGuess(event.target.value);
+    };
+
+    const discardQuestion = () => {
+        if (questions.length > 1) {
+            let tempQuestions = [...questions];
+            tempQuestions.splice(card, 1);
+            setQuestions(tempQuestions);
+            if (card >= tempQuestions.length) {
+                setCard(tempQuestions.length - 1);
+            }
+        } else {
+            alert("! LAST QUESTION CANNOT BE DISCARDED !");
+        }
     };
 
     return (
@@ -246,18 +271,23 @@ const App = () => {
                     </form>
                     <button
                         onClick={updateCardB}
-                        className={card === 10 || card === 0 ? "hide" : ""}>
+                        className={
+                            questions[card].ans_key === "123456$dnkf12"
+                                ? "hide"
+                                : ""
+                        }>
                         ⟵
                     </button>
-                    <button
-                        onClick={updateCardF}
-                        className={card === 9 ? "hide" : ""}>
-                        ⟶
-                    </button>
+                    <button onClick={updateCardF}>⟶</button>
                     <button
                         className="shuffle-button"
                         onClick={updateQuestions}>
                         SHUFFLE
+                    </button>
+                    <button
+                        className="discard-button"
+                        onClick={discardQuestion}>
+                        X
                     </button>
                 </div>
             </div>

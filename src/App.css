@@ -67,3 +67,8 @@ button {
     opacity: 0;
     cursor: default;
 }
+
+.discard-button {
+    background-color: #a7092a;
+    width: 30px;
+}
